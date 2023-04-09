@@ -28,18 +28,23 @@ class notepage extends StatelessWidget {
                 child: Row(
                   children: [
                     Expanded(
-                      child: ElevatedButton(
-                          onPressed: () {},
-                          child: Text(
-                            "Flutter",
-                            style:
-                                TextStyle(fontSize: 20.0, color: Colors.black),
-                          ),
-                          style: ElevatedButton.styleFrom(
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(10.0)),
-                              backgroundColor: Colors.grey,
-                              minimumSize: Size(140, 115))),
+                      child: Card(
+                        elevation: 4,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.0)),
+                        child: ElevatedButton(
+                            onPressed: () {},
+                            child: Text(
+                              "Flutter",
+                              style: TextStyle(
+                                  fontSize: 20.0, color: Colors.black),
+                            ),
+                            style: ElevatedButton.styleFrom(
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10.0)),
+                                backgroundColor: Colors.grey.shade400,
+                                minimumSize: Size(140, 115))),
+                      ),
                     ),
                     SizedBox(
                       width: 20,
@@ -66,17 +71,23 @@ class notepage extends StatelessWidget {
               Expanded(
                 child: Row(children: [
                   Expanded(
-                    child: ElevatedButton(
-                        onPressed: () {},
-                        child: Text(
-                          "Coursera",
-                          style: TextStyle(fontSize: 20.0, color: Colors.black),
-                        ),
-                        style: ElevatedButton.styleFrom(
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10.0)),
-                            backgroundColor: Colors.grey,
-                            minimumSize: Size(140, 115))),
+                    child: Card(
+                      elevation: 4,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10.0)),
+                      child: ElevatedButton(
+                          onPressed: () {},
+                          child: Text(
+                            "Coursera",
+                            style:
+                                TextStyle(fontSize: 20.0, color: Colors.black),
+                          ),
+                          style: ElevatedButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10.0)),
+                              backgroundColor: Colors.grey.shade400,
+                              minimumSize: Size(140, 115))),
+                    ),
                   ),
                   SizedBox(
                     width: 20,
@@ -103,18 +114,23 @@ class notepage extends StatelessWidget {
                 child: Row(
                   children: [
                     Expanded(
-                      child: ElevatedButton(
-                          onPressed: () {},
-                          child: Text(
-                            "Girişimcilik",
-                            style:
-                                TextStyle(fontSize: 20.0, color: Colors.black),
-                          ),
-                          style: ElevatedButton.styleFrom(
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(10.0)),
-                              backgroundColor: Colors.grey,
-                              minimumSize: Size(140, 115))),
+                      child: Card(
+                        elevation: 4,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.0)),
+                        child: ElevatedButton(
+                            onPressed: () {},
+                            child: Text(
+                              "Girişimcilik",
+                              style: TextStyle(
+                                  fontSize: 20.0, color: Colors.black),
+                            ),
+                            style: ElevatedButton.styleFrom(
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10.0)),
+                                backgroundColor: Colors.grey.shade400,
+                                minimumSize: Size(140, 115))),
+                      ),
                     ),
                     SizedBox(
                       width: 20,
@@ -142,17 +158,23 @@ class notepage extends StatelessWidget {
                 child: Row(
                   children: [
                     Expanded(
-                      child: ElevatedButton(
-                        onPressed: () {},
-                        child: Text(
-                          "İngilizce",
-                          style: TextStyle(fontSize: 20.0, color: Colors.black),
-                        ),
-                        style: ElevatedButton.styleFrom(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10.0)),
-                          backgroundColor: Colors.grey,
-                          minimumSize: Size(140, 115),
+                      child: Card(
+                        elevation: 4,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.0)),
+                        child: ElevatedButton(
+                          onPressed: () {},
+                          child: Text(
+                            "İngilizce",
+                            style:
+                                TextStyle(fontSize: 20.0, color: Colors.black),
+                          ),
+                          style: ElevatedButton.styleFrom(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10.0)),
+                            backgroundColor: Colors.grey.shade400,
+                            minimumSize: Size(140, 115),
+                          ),
                         ),
                       ),
                     ),

@@ -28,17 +28,19 @@ class _RegisterScreenState extends State<RegisterScreen> {
           title: Text('Kayıt Ol'),
         ),
         body: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(18.0),
           child: Form(
             key: _formKey,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
+                SizedBox(height: 12.0),
                 TextFormField(
                   controller: _usernameController,
                   decoration: InputDecoration(
                     labelText: 'Kullanıcı Adı',
-                    border: OutlineInputBorder(),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10.0)),
                   ),
                   validator: (value) {
                     if (value == null || value.isEmpty) {
@@ -52,7 +54,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   controller: _emailController,
                   decoration: InputDecoration(
                     labelText: 'E-Posta',
-                    border: OutlineInputBorder(),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10.0)),
                   ),
                   validator: (value) {
                     if (value == null || value.isEmpty) {
@@ -67,7 +70,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   obscureText: true,
                   decoration: InputDecoration(
                     labelText: 'Şifre',
-                    border: OutlineInputBorder(),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10.0)),
                   ),
                   validator: (value) {
                     if (value == null || value.isEmpty) {
@@ -85,7 +89,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   obscureText: true,
                   decoration: InputDecoration(
                     labelText: 'Şifre Tekrarı',
-                    border: OutlineInputBorder(),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10.0)),
                   ),
                   validator: (value) {
                     if (value == null || value.isEmpty) {
@@ -100,7 +105,16 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 SizedBox(height: 32.0),
                 ElevatedButton(
                   onPressed: () => _onPressed(context),
-                  child: Text('Kayıt Ol'),
+                  style: ElevatedButton.styleFrom(
+                    minimumSize: Size(200, 50),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                  ),
+                  child: Text(
+                    'Kayıt Ol',
+                    style: TextStyle(fontSize: 20.0),
+                  ),
                 ),
               ],
             ),

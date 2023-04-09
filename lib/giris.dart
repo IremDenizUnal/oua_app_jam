@@ -8,7 +8,7 @@ class LoginScreen extends StatelessWidget {
   final TextEditingController _passwordController = TextEditingController();
 
   void _onPressed(BuildContext context) {
-    Navigator.push(
+    Navigator.pushReplacement(
       context,
       MaterialPageRoute(builder: (context) => notepage()),
     );
@@ -28,29 +28,42 @@ class LoginScreen extends StatelessWidget {
         title: Text('Giriş Yap'),
       ),
       body: Padding(
-        padding: EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            TextField(
-              controller: _usernameController,
-              decoration: InputDecoration(
-                labelText: 'Kullanıcı Adı',
+        padding: EdgeInsets.all(20.0),
+        child: Center(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+
+              TextField(
+                controller: _usernameController,
+                decoration: InputDecoration(
+                  labelText: 'Kullanıcı Adı',
+                ),
               ),
-            ),
-            TextField(
-              controller: _passwordController,
-              obscureText: true,
-              decoration: InputDecoration(
-                labelText: 'Şifre',
+              TextField(
+                controller: _passwordController,
+                obscureText: true,
+                decoration: InputDecoration(
+                  labelText: 'Şifre',
+                ),
               ),
-            ),
-            SizedBox(height: 16.0),
-            ElevatedButton(
-              onPressed: () => _onPressed(context),
-              child: Text('Giriş Yap'),
-            ),
-          ],
+              SizedBox(height: 16.0),
+              ElevatedButton(
+                onPressed: () => _onPressed(context),
+                style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    minimumSize: Size(200, 50)),
+                child: Text(
+                  'Giriş Yap',
+                  style: TextStyle(
+                    fontSize: 20.0,
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
       floatingActionButton: KayitOlButton(
@@ -71,11 +84,16 @@ class KayitOlButton extends StatelessWidget {
       bottom: 16.0,
       right: 16.0,
       child: SizedBox(
-        width: 100.0,
-        height: 40.0,
+        width:130.0,
+        height: 50.0,
         child: ElevatedButton(
           onPressed: onPressed,
-          child: Text('Kayıt Ol'),
+          style: ElevatedButton.styleFrom(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+             ),
+          child: Text('Kayıt Ol',style: TextStyle(fontSize: 20),),
         ),
       ),
     );

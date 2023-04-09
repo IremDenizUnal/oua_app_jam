@@ -19,7 +19,8 @@ class NotListesi extends StatelessWidget {
         backgroundColor: Colors.teal,
       ),
       body: Center(
-        child: ListView.builder(
+        child:
+        ListView.builder(
           itemBuilder: (context, index) {
             return NotItem(listelenenNot: tumNotlar[index]);
           },
