@@ -10,6 +10,11 @@ class notepage extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.teal,
+        leading: Image.asset(
+          'images/0ed7621e-30ae-4f3b-92a9-4c70dc7f6221-removebg-preview.png',
+          height: 40,
+          fit: BoxFit.contain,
+        ),
         title: Text(
           "Aylık Görev Güncellemesi",
         ),

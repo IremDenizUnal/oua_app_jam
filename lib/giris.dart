@@ -25,7 +25,12 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Giriş Yap'),
+        title: Text('Hermes'),
+        leading: Image.asset(
+          'images/0ed7621e-30ae-4f3b-92a9-4c70dc7f6221-removebg-preview.png',
+          height: 40,
+          fit: BoxFit.contain,
+        ),
       ),
       body: Padding(
         padding: EdgeInsets.all(20.0),
@@ -33,7 +38,6 @@ class LoginScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-
               TextField(
                 controller: _usernameController,
                 decoration: InputDecoration(
@@ -84,16 +88,19 @@ class KayitOlButton extends StatelessWidget {
       bottom: 16.0,
       right: 16.0,
       child: SizedBox(
-        width:130.0,
+        width: 130.0,
         height: 50.0,
         child: ElevatedButton(
           onPressed: onPressed,
           style: ElevatedButton.styleFrom(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10),
-              ),
-             ),
-          child: Text('Kayıt Ol',style: TextStyle(fontSize: 20),),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
+          ),
+          child: Text(
+            'Kayıt Ol',
+            style: TextStyle(fontSize: 20),
+          ),
         ),
       ),
     );
